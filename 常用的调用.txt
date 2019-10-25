@@ -1,0 +1,31 @@
+调用腾讯位置服务的代码：
+    let plugin = requirePlugin('routePlan');
+    let key = 'AF2BZ-RF7RU-YOHVX-BT5QG-WXLMQ-SBB7D';  //使用在腾讯位置服务申请的key
+    let referer = '江城秀-用户导航端';   //调用插件的app的名称
+    let endPoint = JSON.stringify({  //终点
+      'name': '长江大桥',
+      'latitude': 30.552320,
+      'longitude': 114.282575
+    });
+    wx.navigateTo({
+      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+    });
+
+
+
+调用获取当前页面路径的函数
+console.log(this.route)
+
+
+列表渲染：
+<!--wxml-->
+<view wx:for="{{array}}"> {{item}} </view>
+
+
+// page.js
+Page({
+  data: {
+    array: [1, 2, 3, 4, 5]
+  }
+})
+

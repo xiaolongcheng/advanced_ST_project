@@ -1,0 +1,68 @@
+<import src="../../template/index_sections/index_sections.wxml" />
+<import src="../../template/classification/classification.wxml" />
+
+<view style="background-color:#fff;padding:15rpx 0rpx">
+<!-- 显示轮播图 -->
+  <view style="margin:0 23rpx;">
+    <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+      <block wx:for="{{bnrUrl}}" wx:for-index="index">
+        <swiper-item>
+          <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--显示分类-->
+      <view class="class-item-box">
+        <template wx:for="{{classItems_1}}" wx:key="idx" is="index_sections" data="{{item}}"></template>
+      </view>
+
+      <view class="class-item-box">
+        <template wx:for="{{classItems_2}}" wx:key="idx" is="index_sections" data="{{item}}"></template>
+      </view>
+  <!--显示分类结束-->
+
+<!-- 显示列表 -->
+  <view>
+    <view class="viewpoint-item-container" wx:for="{{viewpointItems}}" data="{{item}}">
+    <scroll-view scroll-y="true" style="height: 300rpx;" scroll-into-view="{{toView}}">
+      <view class="viewpoint-item-img-box">
+        <image class="viewpoint-item-img" src="{{item.img_url}}" />
+        <text>{{item.short_des}}</text>
+      </view>
+     </scroll-view>
+    </view>
+  </view>
+<!-- 显示列表结束 -->
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- index.wxml
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/detail/detail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "江城·美拍",
+    "navigationBarTextStyle": "black"
+  },"tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "assets/images/tabs/sv.png",
+        "iconPath": "assets/images/tabs/uk.png",
+        "pagePath": "pages/index/index",
+        "text": "大美武汉"
+      },
+      {
+        "selectedIconPath": "assets/images/tabs/sk.png",
+        "iconPath": "assets/images/tabs/uk.png",
+        "pagePath": "pages/logs/logs",
+        "text": "打卡记录"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "color": "#979795",
+    "selectedColor": "#E74552"
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.1",
+      "provider": "wx50b5593e81dd937a"
+    },
+    "chooseLocation": {
+      "version": "1.0.0",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}
